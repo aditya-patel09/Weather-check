@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cloud {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(#87CEEB, #ffffff);
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.clouds {
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  opacity: 0.5;
+  z-index: 0;
+  animation: move 15s linear infinite;
+  
+}
+
+.clouds.Second {
+  top: 300px;
+  left: -300px;
+  opacity: 0.5;
+  animation-delay: 5s;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(140vw);
+  }
+}
+
+.container {
+  width: min(92%, 380px);
+  min-height: 60vh;
+  margin: 40px auto;
+  padding: 16px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+
+  background: linear-gradient(120deg, #87dfe7, #83d1b5, #e6a0e6);
+  background-size: 300% 300%;
+  animation: bgMove 8s ease-in-out infinite;
+
+  border: 2px solid #799496;
+  box-shadow: 0 0 15px rgba(121, 148, 150, 0.8);
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.search {
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  background-color: rgba(54, 140, 171, 0.9);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(54, 140, 171, 0.9);
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+.search input::placeholder {
+  color: #eef;
+}
+
+.search img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.error {
+  width: 85%;
+  height: 42px;
+  margin: 30px auto;
+  background-color: rgba(91, 193, 137, 0.8);
+  border: 2px solid rgb(91, 193, 137);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.animation {
+  animation: pop 0.25s ease-in-out;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+.location {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hold {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.location-icon {
+  width: 18px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.date {
+  font-size: 14px;
+  color: white;
+}
+
+.temp {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather {
+  width: clamp(90px, 30vw, 120px);
+}
+
+.temp-text {
+  text-align: right;
+}
+
+.temp-value {
+  font-size: clamp(22px, 6vw, 30px);
+  font-weight: 700;
+  color: white;
+}
+
+.name-weather {
+  font-size: clamp(18px, 5vw, 22px);
+  color: white;
+}
+
+.value {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.right-value,
+.left-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.drop,
+.wind {
+  width: 22px;
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    margin: 20px auto;
+    padding: 14px;
+  }
+
+  .location {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .temp {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .temp-text {
+    text-align: center;
+  }
+
+  .value {
+    flex-direction: column;
+  }
+
+  .right-value,
+  .left-value {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+/* slider */
+.slider {
+  width: 95%;
+  height: 120px;
+  margin: 20px auto 0;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-behavior: smooth;
+  opacity: 0.8;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+  height: 110px;
+  min-width: 90px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(43, 44, 44, 0.9);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+p .tempe {
+  min-width: 90px;
+  text-align: center;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+  margin: 50% auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+
+.display {
+  display: none;
+}

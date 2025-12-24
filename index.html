@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live - Weather show</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+  <div class="cloud">
+      <img width="300px" src="Assets/c1.png" alt="" class="clouds">
+       <img width="300px" src="Assets/c1.png" alt="" class="clouds Second">
+    <div class="container ">
+        <div class="search">
+            <input type="text" placeholder="Search City">
+            <img width="20px" src="Assets/search.svg" alt="" class="search-icon">
+          </div>
+         <div class="error display ">
+            Wrong City !
+        </div>
+        <div class="loader display"></div>
+        <div class="location remove">
+            <div class="hold">
+            <img width="18px" src="Assets/location.svg" alt="" class="location-icon">
+            <p class="name">India</p>
+            </div>
+            <span class="date">Thu,8 Aug</span>
+        </div>
+        <div class="temp remove">
+            <img  src="Assets/clouds.svg" alt="" class="weather">
+             <div class="temp-text">
+                <div class="temp-value">30 <sup>o</sup>C</div>
+                <div class="name-weather">Clouds</div>
+             </div>
+        </div>
+        <div class="value remove">
+            <div class="right-value">
+                <img width="20px" src="Assets/drop.svg" alt="" class="drop">
+                <div class="humidity">
+                    <div>Humidity</div>
+                    <div class="humidity-value">74%</div>
+                </div>
+                </div>
+                <div class="left-value">
+                    <img width="20px" src="Assets/wind.svg" alt="" class="wind-icon">
+                     <div class="wind-info">
+                    <div>Wind Speed</div>
+                    <div class="wind-value">4.12 m/s</div>
+                </div>
+                </div>
+                
+            
+        </div>
+        <div class="slider remove">
+  <div class="box">
+    <p class="day">9 Aug</p>
+    <img width="40px" src="Assets/rain.svg">
+    <p class="tempe">28°C</p>
+  </div>
+
+  <div class="box">
+    <p class="day">10 Aug</p>
+    <img width="40px" src="Assets/snow.svg">
+    <p class="tempe">32°C</p>
+  </div>
+
+  <div class="box">
+    <p class="day">11 Aug</p>
+    <img width="40px" src="Assets/clear.svg">
+    <p class="tempe">32°C</p>
+  </div>
+
+  <div class="box">
+    <p class="day">12 Aug</p>
+    <img width="40px" src="Assets/clouds.svg" alt="">
+    <p class="tempe">32°C</p>
+  </div>
+</div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
